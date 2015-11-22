@@ -2,7 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
-## makeCacheMatrix: defines a special "matrix" object that can cache its inverse.
+## makeCacheMatrix: take a input matrix x then defines a special "matrix" object 
+## that can cache its inverse.
 #
 makeCacheMatrix <- function(x = matrix()) {
   inverse_matrix <- NULL
@@ -19,7 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-## cacheSolve take an input matrix x and determine whether or not the input matrix already
+## cacheSolve take an input "makeCacheMatrix" matrix x   
+##    and determine whether or not the input matrix already
 ##    defined its inverse . If inverse is not defined then use solve to calculate
 ##    the inverse of x. If x's inverse matrix is already define, just grab it from 
 ##    its cache.
