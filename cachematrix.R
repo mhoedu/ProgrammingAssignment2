@@ -28,17 +28,19 @@ cacheSolve <- function(x, ...) {
   #is the inverse matrix already defined
   
    invX <- x$getinvmat()
-   if (!is.null(invX)) {
-    message("Inverse matrix is already defined. Getting it from cache data")
-    return(invX)
-   }
-   else
-   {
+   if (is.null(invX)) {
      message("Nothing in cache. Use solve to obtain the inverse of current matrix")
      invX <- solve(x$get())
      x$setinvmat(invX)
      invX
-   }
+     
+  }
+   else
+   {
+     message("Inverse matrix is already defined. Getting it from cache data")
+     return(invX)
+     
+    }
 }
 ####  Here is the test case(s) for this assignment.
 #### define matrix  2x2 filling with index 1:4
