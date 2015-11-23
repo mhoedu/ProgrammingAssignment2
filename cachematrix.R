@@ -1,8 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-## makeCacheMatrix: take a input matrix x then defines a special "matrix" object 
+## makeCacheMatrix: take a input matrix x presumably inversible matrix then defines a special "matrix" object 
 ## that can cache its inverse.
 #
 makeCacheMatrix <- function(x = matrix()) {
@@ -19,7 +15,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 ## cacheSolve take an input "makeCacheMatrix" matrix x   
 ##    and determine whether or not the input matrix already
 ##    defined its inverse . If inverse is not defined then use solve to calculate
@@ -45,7 +40,7 @@ cacheSolve <- function(x, ...) {
      invX
    }
 }
-####  test case
+####  Here is the test case(s) for this assignment.
 #### define matrix  2x2 filling with index 1:4
 #> testmatrix <- makeCacheMatrix(rbind(1:2,3:4))
 #### Show it
